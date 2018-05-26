@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController{
 
     @IBOutlet weak var TextRobot: UILabel!
     @IBOutlet weak var ImageRobot: UIImageView!
@@ -35,6 +35,8 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
 
     

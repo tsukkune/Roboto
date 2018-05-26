@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var RobotImage: UIImageView!
     @IBOutlet weak var TextField: UITextField!
@@ -96,6 +96,18 @@ class ViewController: UIViewController {
         })
         
         task.resume()
+    }
+    //Hide keyboard touching outside keyboard
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    //Hide keyboard pressing return
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        TextField.resignFirstResponder()
+        return true
     }
 }
 
